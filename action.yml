@@ -12,7 +12,7 @@ inputs:
   lambda_function_name:
     description: The Lambda function name. Check the AWS docs/readme for examples.
     required: true
-   s3_bucket:
+  s3_bucket:
     description: s3 bucket to put deps in
     required: true
     default: ''
