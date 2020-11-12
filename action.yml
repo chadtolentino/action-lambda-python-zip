@@ -14,7 +14,6 @@ inputs:
     required: true
   s3_bucket:
     description: s3 bucket to put deps in
-    required: true
     default: ''
 runs:
   using: 'docker'
