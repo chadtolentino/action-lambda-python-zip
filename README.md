@@ -7,13 +7,13 @@ GitHub Action to make zip deployment to AWS Lambda with requirements in a separa
 This action automatically installs requirements, zips and deploys the code including the dependencies as a separate layer.
 
 #### Python 3.8 is supported
-#### Also supports uploading dependecies greater than 50MB to layer
+#### Also supports uploading dependencies greater than 50MB to layer (via s3 buckets)
 
 ### Pre-requisites
 In order for the Action to have access to the code, you must use the `actions/checkout@master` job before it. 
 
 ### Structure
-- Lambda code should be `lambda_function.py`** unless you want to have a customized file name.
+- Lambda code should be `lambda_function.py` unless you want to have a customized file name.
 - **Dependencies must be stored in a `requirements.txt`**
 
 ### Environment variables
@@ -34,7 +34,7 @@ Storing credentials as secret is stronly recommended.
 - `requirements_txt`
     The name/path for the `requirements.txt` file. Defaults to `requirements.txt`.
 - `s3_bucket`
-    Name of S3 bucket to upload dependencies.zip to
+    Name of S3 bucket to upload dependencies.zip to (for dependencies over 50 MB)
 
 ### Example Workflow
 ```yaml
