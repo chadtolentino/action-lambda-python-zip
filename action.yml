@@ -1,5 +1,5 @@
 name: AWS Lambda Zip Deploy - Python
-author: quibitro
+author: qubitro
 description: Zip deploy to AWS Lambda with requirements in a separate layer.
 inputs:
   requirements_txt:
